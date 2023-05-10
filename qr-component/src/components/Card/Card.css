@@ -30,7 +30,7 @@
 	letter-spacing: -0.2px;
 }
 
-.Card-content h3 {
+.Card-content h1 {
 	font-size: 1.3rem;
 	color: hsl(218, 44%, 22%);
 	font-weight: 700;

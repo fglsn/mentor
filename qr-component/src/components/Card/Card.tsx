@@ -6,7 +6,7 @@ type Props = {
 	children: JSX.Element | string;
 };
 
-const Heading = ({ children }: Props) => <h3>{children}</h3>;
+const Heading = ({ children }: Props) => <h1>{children}</h1>;
 const Text = ({ children }: Props) => <p>{children}</p>;
 
 const Card = () => {
