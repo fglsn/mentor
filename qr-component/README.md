@@ -18,12 +18,11 @@ This is a solution to the [QR code component challenge on Frontend Mentor](https
 
 ### Built with
 
-- React
+- [React](https://reactjs.org/)
 - Typescript
 - CSS custom properties
 - Flexbox
 - Mobile-first workflow
-- [React](https://reactjs.org/)
 
 ## Author
 
