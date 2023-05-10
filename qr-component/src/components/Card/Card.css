@@ -1,0 +1,23 @@
+.Card-container {
+	background-color: white;
+	border-radius: 13px;
+	height: 400px;
+	width: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 12px;
+}
+
+.Card-image-wrapper {
+	height: 60%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	object-fit: scale-down;
+}
+
+.Card-image {
+	border-radius: 8px;
+	max-height: 100%;
+}
