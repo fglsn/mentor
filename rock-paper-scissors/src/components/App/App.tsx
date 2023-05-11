@@ -4,7 +4,8 @@ import styled from 'styled-components';
 import './App.css';
 
 export const StyledContainer = styled.div`
-
+	margin: 30px;
+	max-width: 100%;
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
@@ -13,7 +14,7 @@ export const StyledContainer = styled.div`
 	font-size: calc(10px + 2vmin);
 `;
 
-function App() {
+const App = () => {
 	return (
 		<StyledContainer>
 			<Header />
