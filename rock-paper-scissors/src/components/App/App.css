@@ -1,0 +1,18 @@
+.App {
+	text-align: center;
+}
+
+/* @media (prefers-reduced-motion: no-preference) {
+
+} */
+
+.App-wrapper {
+	background-image: radial-gradient(at 50% 0%, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: calc(10px + 2vmin);
+	color: white;
+}
