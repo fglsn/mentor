@@ -23,10 +23,11 @@ export const Heading = styled.h1`
 	font-size: 1.3rem;
 	font-weight: 600;
 	line-height: 0.8;
-  letter-spacing: 0.4px;
+	letter-spacing: 0.4px;
 `;
 
 const Header = () => {
+
 	return (
 		<Container>
 			<Heading>

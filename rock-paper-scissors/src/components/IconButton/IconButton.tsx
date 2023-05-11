@@ -43,11 +43,45 @@ export const Icon = styled.div`
 		inset 5px -5px 0px #ffffff;
 `;
 
-const IconButton = ({ variant }: { variant: Variant }) => {
+export const EmptyIcon = styled.div`
+	width: 110px;
+	height: 110px;
+	box-sizing: border-box;
+	background: rgb(14 27 49 / 51%);
+	border-radius: 50%;
+	margin-top: 15px;
+	animation: animation 3s 1 ease both;
+	@keyframes animation {
+		from {
+			background: rgb(14 27 49 / 51%);
+		}
+		to {
+			background: rgb(91 105 129 / 53%);
+		}
+	}
+`;
+
+const IconButton = ({
+	variant,
+	handleSelect,
+}: {
+	variant: Variant;
+	handleSelect?: (variant: Variant) => void;
+}) => {
+	if (!handleSelect) {
+		return (
+			<StyledButton variant={variant}>
+				<Icon>
+					<img alt={variant} src={VARIANTS[variant]} />
+				</Icon>
+			</StyledButton>
+		);
+	}
+
 	return (
 		<StyledButton
 			variant={variant}
-			onClick={() => console.log({ variant })}
+			onClick={() => handleSelect(variant)}
 		>
 			<Icon>
 				<img alt={variant} src={VARIANTS[variant]} />

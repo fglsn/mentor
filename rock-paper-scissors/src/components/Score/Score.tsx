@@ -1,5 +1,6 @@
 import * as React from 'react';
 import styled from 'styled-components';
+import { ScoreCountContext } from '../../ScoreCountProvider';
 
 export const Container = styled.div`
 	box-sizing: border-box;
@@ -27,10 +28,12 @@ export const ScoreNumber = styled.h3`
 `;
 
 function Score() {
+	const { score } = React.useContext(ScoreCountContext);
+
 	return (
 		<Container>
 			<Heading>SCORE</Heading>
-			<ScoreNumber>0</ScoreNumber>
+			<ScoreNumber>{score}</ScoreNumber>
 		</Container>
 	);
 }
