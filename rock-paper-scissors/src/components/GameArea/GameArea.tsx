@@ -32,7 +32,6 @@ export const Row = styled.div`
 const GameArea = () => {
 	return (
 		<Area>
-			{/* <Background /> */}
 			<Row>
 				<IconButton variant="paper"></IconButton>
 				<IconButton variant="scissors"></IconButton>
