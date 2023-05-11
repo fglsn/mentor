@@ -1,4 +1,5 @@
 import * as React from 'react';
+import ScoreCountProvider from '../../ScoreCountProvider';
 import Header from '../Header';
 import GameArea from '../GameArea/GameArea';
 import styled from 'styled-components';
@@ -17,10 +18,12 @@ export const StyledContainer = styled.div`
 
 const App = () => {
 	return (
-		<StyledContainer>
-			<Header />
-			<GameArea />
-		</StyledContainer>
+		<ScoreCountProvider>
+			<StyledContainer>
+				<Header />
+				<GameArea />
+			</StyledContainer>
+		</ScoreCountProvider>
 	);
 };
 
