@@ -24,5 +24,17 @@ declare module 'styled-components' {
 			secondary: string;
 			outline: string;
 		};
+
+		gradients: {
+			scissors: string;
+			paper: string;
+			rock: string;
+		};
+
+		shadows: {
+			scissors: string;
+			paper: string;
+			rock: string;
+		};
 	}
 }

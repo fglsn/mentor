@@ -23,6 +23,19 @@ const defaultTheme: DefaultTheme = {
 		secondary: 'hsl(229, 25%, 31%)',
 		outline: 'hsl(217, 16%, 45%)',
 	},
+
+	gradients: {
+		scissors:
+			'linear-gradient(350deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%))',
+		paper: 'linear-gradient(350deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%))',
+		rock: 'linear-gradient(350deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%))',
+	},
+
+	shadows: {
+		scissors: '#c76b17',
+		paper: '#2844c2',
+		rock: '#a61632',
+	},
 };
 
 export default defaultTheme;

@@ -1,5 +1,6 @@
 import * as React from 'react';
 import Header from '../Header';
+import GameArea from '../GameArea/GameArea';
 import styled from 'styled-components';
 import './App.css';
 
@@ -18,8 +19,9 @@ const App = () => {
 	return (
 		<StyledContainer>
 			<Header />
+			<GameArea />
 		</StyledContainer>
 	);
-}
+};
 
 export default App;
