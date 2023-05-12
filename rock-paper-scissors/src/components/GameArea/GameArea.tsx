@@ -5,6 +5,7 @@ import { Variant } from '../../types';
 import VariantSelector from '../VariantSelector/VariantSelector';
 import VariantPlaceholder from '../VariantPlaceholder/VariantPlaceholder';
 import Result from '../Result/Result';
+import { ScoreCountContext } from '../../ScoreCountProvider';
 
 export const Area = styled.main`
 	width: 100%;
@@ -64,6 +65,8 @@ const getResult = (userVariant: string, houseVariant: string) => {
 };
 
 const GameArea = () => {
+	const { score, setScore } = React.useContext(ScoreCountContext);
+
 	const [selectedVariant, setSelectedVariant] =
 		React.useState<Variant | null>(null);
 
@@ -106,6 +109,10 @@ const GameArea = () => {
 			selectedHouseVariant
 		);
 		setResultMessage(result.message);
+		const newScore = score + result.score;
+		setScore(newScore);
+		localStorage.setItem('score', JSON.stringify(newScore));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [selectedHouseVariant, selectedVariant]);
 
 	if (!selectedVariant)

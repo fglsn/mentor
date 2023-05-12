@@ -5,7 +5,7 @@ import Score from '../Score';
 export const Container = styled.header`
 	box-sizing: border-box;
 	width: 100%;
-	height: 110px;
+	height: 100px;
 	color: ${(props) => props.theme.colors.main};
 	border: solid 3px ${(props) => props.theme.colors.outline};
 	border-radius: ${(props) => props.theme.borderRadius};

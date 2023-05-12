@@ -1,9 +1,7 @@
 import * as React from 'react';
 
 const localScore = localStorage.getItem('score');
-
-const savedScore: number =
-	(localScore && JSON.parse(localScore)) || 0;
+let initialScore: number = localScore ? JSON.parse(localScore) : 0;
 
 type ScoreCountContextType = {
 	score: number;
@@ -12,7 +10,7 @@ type ScoreCountContextType = {
 
 export const ScoreCountContext =
 	React.createContext<ScoreCountContextType>({
-		score: savedScore,
+		score: initialScore,
 		setScore: () => {},
 	});
 
@@ -23,7 +21,7 @@ const ScoreCountProvider = ({
 }: {
 	children: JSX.Element;
 }) => {
-	const [score, setScore] = React.useState(0);
+	const [score, setScore] = React.useState(initialScore);
 
 	const value = React.useMemo(() => {
 		return { score, setScore };

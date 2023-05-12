@@ -13,6 +13,7 @@ export const Container = styled.div`
 	align-items: center;
 	justify-content: center;
 	height: 100%;
+	width: 80px;
 `;
 
 export const Heading = styled.h2`
@@ -29,7 +30,7 @@ export const ScoreNumber = styled.h3`
 
 function Score() {
 	const { score } = React.useContext(ScoreCountContext);
-
+	console.log({score})
 	return (
 		<Container>
 			<Heading>SCORE</Heading>
