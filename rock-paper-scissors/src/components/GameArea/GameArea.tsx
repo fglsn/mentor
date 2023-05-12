@@ -48,6 +48,16 @@ const Label = styled.h4`
 	letter-spacing: 2px;
 `;
 
+interface Props {
+	glowDistance: string;
+}
+
+const Glow = styled.div<Props>`
+	box-shadow: 0 0 0 ${(props) => props.glowDistance}
+		rgba(255, 255, 255, 3%);
+	border-radius: 50%;
+`;
+
 const getRandomItem = (items: Variant[]) => {
 	return items[(items.length * Math.random()) | 0];
 };
@@ -122,7 +132,19 @@ const GameArea = () => {
 		<Area>
 			<Row>
 				<PickedHand>
-					<IconButton variant={selectedVariant} />
+					{resultMessage ? (
+						<Glow glowDistance="17px">
+							<Glow glowDistance="45px">
+								<Glow glowDistance="80px">
+									<IconButton
+										variant={selectedVariant}
+									/>
+								</Glow>
+							</Glow>
+						</Glow>
+					) : (
+						<IconButton variant={selectedVariant} />
+					)}
 					<Label>YOU PICKED</Label>
 				</PickedHand>
 				<PickedHand>
